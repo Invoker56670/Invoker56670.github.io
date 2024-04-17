@@ -26,7 +26,7 @@
         .typing {
             font-family: 'Pacifico', cursive; /* Different font */
             color: #e74c3c; /* Red */
-            display: inline-block;
+            display: inline;
             overflow: hidden;
             white-space: nowrap;
             border-right: .15em solid transparent; /* Transparent border */
@@ -58,7 +58,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br><br>
+        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br>
             When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span>, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
