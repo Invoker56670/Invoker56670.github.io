@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,6 +48,10 @@
             color: #f39c12; /* Yellow */
         }
 
+        .project h3 {
+            color: #2980b9; /* Different color for project subheadings */
+        }
+
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
@@ -88,12 +92,10 @@
         <div class="project">
             <h3>Epsilon-X</h3>
             <p>A low-cost versatile robust small ship which can be customised into many uses...for eg. water depth measurement, water quality testing etc.</p>
-            
         </div>
         <div class="project">
             <h3>Algorythms</h3>
             <p>An app to help organize and take appointments from doctors conveniently in a hassle-free way</p>
-         
         </div>
         <!-- Add more projects as needed -->
     </section>
