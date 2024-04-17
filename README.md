@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,7 +99,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var text = document.getElementById('dynamic-text');
-            var words = ['code', 'song', 'joke'];
+            var words = ['code ', 'song ', 'joke '];
             var index = 0;
 
             function animateText() {
@@ -135,7 +135,7 @@
             animateText();
 
             var text2 = document.getElementById('dynamic-text2');
-            var words2 = ['coder', 'guitarist', 'comedian'];
+            var words2 = ['coder     ', 'guitarist ', 'comedian  '];
             var index2 = 0;
 
             function animateText2() {
