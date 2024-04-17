@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,13 +21,14 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-Certainly! Here's a brief description based on your talents and interests:
-
-Hey there! 👋 I'm Aryan Roy, a multifaceted university student with a knack for coding and creativity! When I'm not diving into the world of algorithms and code, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape. Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!
-
-But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy. With a quick wit and a knack for timing, I love to bring laughter to any room I enter. Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.
-
-So, if you're ever in need of a coder with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me! Let's make some magic happen, one line of code, one chord, and one laugh at a time. 🚀✨</p>
+<p>Hey there! 👋 I'm Aryan Roy, a multifaceted university student with a knack for coding and creativity!<br>
+    When I'm not diving into the world of algorithms and code, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
+    Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
+    But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
+    With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
+    Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
+    So, if you're ever in need of a coder with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
+    Let's make some magic happen, one line of code, one chord, and one laugh at a time. 🚀✨</p>
     </section>
 
     <section id="projects">
