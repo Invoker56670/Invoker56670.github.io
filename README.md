@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,6 @@
 
         .typing {
             font-family: 'Pacifico', cursive; /* Different font */
-            color: #e74c3c; /* Red */
             display: inline;
             overflow: hidden;
             white-space: nowrap;
@@ -38,7 +37,15 @@
         }
 
         #dynamic-text3 {
-            color: #3498db; /* Blue */
+            color: #27ae60; /* Green */
+        }
+
+        #dynamic-text4 {
+            color: #e74c3c; /* Red */
+        }
+
+        #dynamic-text {
+            color: #f39c12; /* Yellow */
         }
 
         @keyframes typing {
@@ -66,10 +73,10 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text2" class="typing"></span> <br>
-            When I'm not diving into the world of <span id="dynamic-text" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
+        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span> <br>
+            When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
-            But wait, there's more! Beyond the realms of <span id="dynamic-text3" class="typing"></span> , I've got a flair for comedy.<br>
+            But wait, there's more! Beyond the realms of <span id="dynamic-text3" class="typing"></span> <br>I've got a flair for comedy.<br>
             With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
             Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
             So, if you're ever in need of a <span id="dynamic-text4" class="typing"></span> <br>With a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
