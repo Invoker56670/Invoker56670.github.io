@@ -29,7 +29,7 @@
     Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
     So, if you're ever in need of a coder with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
     Let's make some magic happen, one line of code, one chord, and one laugh at a time. 🚀✨</p>
-    </section>
+   
 
     <section id="projects">
         <h2>Projects</h2>
@@ -58,5 +58,4 @@
     <footer>
         <p>&copy; 2024 Aryan Roy</p>
     </footer>
-</body>
-</html>
+
