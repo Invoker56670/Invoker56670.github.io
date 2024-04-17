@@ -113,7 +113,7 @@
                     i++;
                     if (i > word.length) {
                         clearInterval(interval);
-                        setTimeout(eraseText, 2000);
+                        setTimeout(eraseText, 1000);
                     }
                 }, 50); // Faster typing speed
                 index++;
@@ -127,7 +127,7 @@
                     i--;
                     if (i === 0) {
                         clearInterval(interval);
-                        setTimeout(animateText, 1000);
+                        setTimeout(animateText, 500);
                     }
                 }, 50); // Faster erasing speed
             }
