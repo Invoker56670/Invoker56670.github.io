@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,10 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #1a1a1a; /* Dark grey */
             color: #e6e6e6; /* Light grey */
             padding: 20px;
             margin: 0;
+            background-color: #000; /* Full black */
         }
 
         h1, h2, h3 {
@@ -35,6 +35,10 @@
 
         #dynamic-text2 {
             color: #9b59b6; /* Purple */
+        }
+
+        #dynamic-text3 {
+            color: #3498db; /* Blue */
         }
 
         @keyframes typing {
@@ -65,7 +69,7 @@
         <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text2" class="typing"></span> <br>
             When I'm not diving into the world of <span id="dynamic-text" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
-            But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
+            But wait, there's more! Beyond the realms of <span id="dynamic-text3" class="typing"></span> , I've got a flair for comedy.<br>
             With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
             Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
             So, if you're ever in need of a <span id="dynamic-text4" class="typing"></span> <br>With a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
@@ -178,7 +182,58 @@
             var words3 = ['technology', 'music     ', 'comedy    '];
             var index3 = 0;
 
-          
+            function animateText3() {
+                if (index3 >= words3.length) {
+                    index3 = 0;
+                }
+                var word3 = words3[index3];
+                var i3 = 0;
+                var interval3 = setInterval(function() {
+                    text3.textContent = word3.substring(0, i3);
+                    i3++;
+                    if (i3 > word3.length) {
+                        clearInterval(interval3);
+                        setTimeout(eraseText3, 1000);
+                    }
+                }, 50); // Faster typing speed
+                index3++;
+            }
+
+            function eraseText3() {
+                var word3 = text3.textContent;
+                var i3 = word3.length;
+                var interval3 = setInterval(function() {
+                    text3.textContent = word3.substring(0, i3);
+                    i3--;
+                    if (i3 === 0) {
+                        clearInterval(interval3);
+                        setTimeout(animateText3, 500);
+                    }
+                }, 50); // Faster erasing speed
+            }
+
+            animateText3();
+
+            var text4 = document.getElementById('dynamic-text4');
+            var words4 = ['coder     ', 'guitarist ', 'comedian  '];
+            var index4 = 0;
+
+            function animateText4() {
+                if (index4 >= words4.length) {
+                    index4 = 0;
+                }
+                var word4 = words4[index4];
+                var i4 = 0;
+                var interval4 = setInterval(function() {
+                    text4.textContent = word4.substring(0, i4);
+                    i4++;
+                    if (i4 > word4.length) {
+                        clearInterval(interval4);
+                        setTimeout(eraseText4, 1000);
+                    }
+                }, 50); // Faster typing speed
+                index4++;
+            }
 
             function eraseText4() {
                 var word4 = text4.textContent;
