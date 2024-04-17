@@ -8,14 +8,14 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #1a1a1a; /* Dark grey */
+            color: #e6e6e6; /* Light grey */
             padding: 20px;
             margin: 0;
         }
 
         h1, h2, h3 {
-            color: #f39c12; /* Orange */
+            color: #ffa500; /* Orange */
         }
 
         p {
@@ -31,6 +31,10 @@
             white-space: nowrap;
             border-right: .15em solid transparent; /* Transparent border */
             animation: typing 2s steps(30, end) forwards, blink-caret .5s step-end infinite alternate;
+        }
+
+        #dynamic-text2 {
+            color: #9b59b6; /* Purple */
         }
 
         @keyframes typing {
@@ -58,13 +62,13 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span><br>
-            When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
+        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text2" class="typing"></span> <br>
+            When I'm not diving into the world of <span id="dynamic-text" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
             With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
             Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
-            So, if you're ever in need of a coder with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
+            So, if you're ever in need of a <span id="dynamic-text4" class="typing"></span> <br>With a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
             Let's make some magic happen, one line of code, one chord, and one laugh at a time. 🚀✨</p>
     </section>
 
@@ -98,41 +102,41 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var text = document.getElementById('dynamic-text');
-            var words = ['code      ', 'song      ', 'joke      '];
-            var index = 0;
+            var text1 = document.getElementById('dynamic-text');
+            var words1 = ['code      ', 'song      ', 'joke      '];
+            var index1 = 0;
 
-            function animateText() {
-                if (index >= words.length) {
-                    index = 0;
+            function animateText1() {
+                if (index1 >= words1.length) {
+                    index1 = 0;
                 }
-                var word = words[index];
-                var i = 0;
-                var interval = setInterval(function() {
-                    text.textContent = word.substring(0, i);
-                    i++;
-                    if (i > word.length) {
-                        clearInterval(interval);
-                        setTimeout(eraseText, 1000);
+                var word1 = words1[index1];
+                var i1 = 0;
+                var interval1 = setInterval(function() {
+                    text1.textContent = word1.substring(0, i1);
+                    i1++;
+                    if (i1 > word1.length) {
+                        clearInterval(interval1);
+                        setTimeout(eraseText1, 1000);
                     }
                 }, 50); // Faster typing speed
-                index++;
+                index1++;
             }
 
-            function eraseText() {
-                var word = text.textContent;
-                var i = word.length;
-                var interval = setInterval(function() {
-                    text.textContent = word.substring(0, i);
-                    i--;
-                    if (i === 0) {
-                        clearInterval(interval);
-                        setTimeout(animateText, 500);
+            function eraseText1() {
+                var word1 = text1.textContent;
+                var i1 = word1.length;
+                var interval1 = setInterval(function() {
+                    text1.textContent = word1.substring(0, i1);
+                    i1--;
+                    if (i1 === 0) {
+                        clearInterval(interval1);
+                        setTimeout(animateText1, 500);
                     }
                 }, 50); // Faster erasing speed
             }
 
-            animateText();
+            animateText1();
 
             var text2 = document.getElementById('dynamic-text2');
             var words2 = ['coder     ', 'guitarist ', 'comedian  '];
@@ -169,6 +173,27 @@
             }
 
             animateText2();
+
+            var text3 = document.getElementById('dynamic-text3');
+            var words3 = ['technology', 'music     ', 'comedy    '];
+            var index3 = 0;
+
+          
+
+            function eraseText4() {
+                var word4 = text4.textContent;
+                var i4 = word4.length;
+                var interval4 = setInterval(function() {
+                    text4.textContent = word4.substring(0, i4);
+                    i4--;
+                    if (i4 === 0) {
+                        clearInterval(interval4);
+                        setTimeout(animateText4, 500);
+                    }
+                }, 50); // Faster erasing speed
+            }
+
+            animateText4();
         });
     </script>
 </body>
