@@ -29,8 +29,8 @@
             display: inline-block;
             overflow: hidden;
             white-space: nowrap;
-            border-right: .15em solid #e74c3c; /* Red */
-            animation: typing 2s steps(30, end), blink-caret .5s step-end infinite alternate;
+            border-right: .15em solid transparent; /* Transparent border */
+            animation: typing 2s steps(30, end) forwards, blink-caret .5s step-end infinite alternate;
         }
 
         @keyframes typing {
@@ -40,7 +40,7 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: transparent; background-color: #e74c3c; } /* Red */
+            50% { border-color: transparent; background-color: transparent; } /* Transparent background */
         }
     </style>
 </head>
@@ -58,7 +58,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br>
+        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br><br>
             When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span>, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
@@ -115,7 +115,7 @@
                         clearInterval(interval);
                         setTimeout(eraseText, 1000);
                     }
-                }, 200);
+                }, 50); // Faster typing speed
                 index++;
             }
 
@@ -129,7 +129,7 @@
                         clearInterval(interval);
                         setTimeout(animateText, 500);
                     }
-                }, 100);
+                }, 50); // Faster erasing speed
             }
 
             animateText();
@@ -151,7 +151,7 @@
                         clearInterval(interval2);
                         setTimeout(eraseText2, 1000);
                     }
-                }, 200);
+                }, 50); // Faster typing speed
                 index2++;
             }
 
@@ -165,7 +165,7 @@
                         clearInterval(interval2);
                         setTimeout(animateText2, 500);
                     }
-                }, 100);
+                }, 50); // Faster erasing speed
             }
 
             animateText2();
