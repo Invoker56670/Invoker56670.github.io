@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Roy- Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            color: #f39c12; /* Orange */
+        }
+
+        p {
+            color: #3498db; /* Blue */
+            line-height: 1.5;
+        }
+
         .typing {
+            font-family: 'Pacifico', cursive; /* Different font */
+            color: #e74c3c; /* Red */
             display: inline-block;
             overflow: hidden;
             white-space: nowrap;
-            border-right: .15em solid orange;
+            border-right: .15em solid #e74c3c; /* Red */
             animation: typing 2s steps(30, end), blink-caret .5s step-end infinite alternate;
         }
 
@@ -21,7 +40,7 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: orange; }
+            50% { border-color: transparent; background-color: #e74c3c; } /* Red */
         }
     </style>
 </head>
@@ -39,13 +58,13 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted university student with a knack for <span id="dynamic-text" class="typing"></span>!<br>
-            When I'm not diving into the world of algorithms and code, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
+        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br>
+            When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span>, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
             With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
             Whether it's through a clever joke or a witty observation, I believe in the power of humor to brighten anyone's day.<br>
-            So, if you're ever in need of a <span id="dynamic-text2" class="typing"></span> with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
+            So, if you're ever in need of a coder with a musical soul, a dancer with a comedic edge, or just someone to jam with, you know where to find me!<br>
             Let's make some magic happen, one line of code, one chord, and one laugh at a time. 🚀✨</p>
     </section>
 
@@ -80,7 +99,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var text = document.getElementById('dynamic-text');
-            var words = ['coder', 'doctor', 'comedian'];
+            var words = ['coding', 'guitar playing', 'laughter'];
             var index = 0;
 
             function animateText() {
@@ -116,7 +135,7 @@
             animateText();
 
             var text2 = document.getElementById('dynamic-text2');
-            var words2 = ['coder', 'singer', 'comedian'];
+            var words2 = ['coder', 'guitarist', 'comedian'];
             var index2 = 0;
 
             function animateText2() {
