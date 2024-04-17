@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +59,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text" class="typing"></span>!<br>
-            When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span>, you might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
+            When I'm not diving into the world of <span id="dynamic-text2" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of technology and melody, I've got a flair for comedy.<br>
             With a quick wit and a knack for timing, I love to bring laughter to any room I enter.<br>
@@ -71,14 +71,14 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of Project 1...</p>
-            <a href="#">View Project</a>
+            <h3>Epsilon-X</h3>
+            <p>A low-cost versatile robust small ship which can be customised into many uses...for eg. water depth measurement, water quality testing etc.</p>
+            
         </div>
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of Project 2...</p>
-            <a href="#">View Project</a>
+            <h3>Algorythms</h3>
+            <p>An app to help organize and take appointments from doctors conveniently in a hassle-free way</p>
+         
         </div>
         <!-- Add more projects as needed -->
     </section>
@@ -88,7 +88,7 @@
         <ul>
             <li>Email: <a href="mailto:aryanroy56670@gmail.com">aryanroy56670@gmail.com</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/aryan-roy-699342225/">Aryan Roy</a></li>
-            <li>Twitter: <a href="https://twitter.com/YourTwitterHandle">@YourTwitterHandle</a></li>
+            <li>Twitter: <a href="https://twitter.com/Invoker_di_grt">@Invoker_di_grt</a></li>
         </ul>
     </section>
 
@@ -99,7 +99,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var text = document.getElementById('dynamic-text');
-            var words = ['coding', 'guitar playing', 'laughter'];
+            var words = ['code', 'song', 'joke'];
             var index = 0;
 
             function animateText() {
