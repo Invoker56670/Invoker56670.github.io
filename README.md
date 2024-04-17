@@ -77,7 +77,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey there! 👋 I'm Aryan Roy, a multifaceted <span id="dynamic-text2" class="typing"></span> <br>
+        <p>Hey there! 👋 <br>I'm Aryan Roy, a multifaceted <span id="dynamic-text2" class="typing"></span> <br>
             When I'm not diving into the world of <span id="dynamic-text" class="typing"></span> <br>You might find me belting out tunes as I sing or strumming on my guitar, letting music be my escape.<br>
             Dance? Oh, it's not just a hobby; it's a way to groove through life's rhythm!<br>
             But wait, there's more! Beyond the realms of <span id="dynamic-text3" class="typing"></span> <br>I've got a flair for comedy.<br>
