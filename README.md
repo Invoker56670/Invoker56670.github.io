@@ -45,11 +45,12 @@
         }
 
         #dynamic-text {
-            color: #f39c12; /* Yellow */
+            color: #fafa05; /* Yellow */
         }
 
-        .project h3 {
-            color: #2980b9; /* Different color for project subheadings */
+        /* Updated color for project subheadings */
+        #projects h3 {
+            color: #05faf2; /* Purple */
         }
 
         @keyframes typing {
@@ -92,10 +93,12 @@
         <div class="project">
             <h3>Epsilon-X</h3>
             <p>A low-cost versatile robust small ship which can be customised into many uses...for eg. water depth measurement, water quality testing etc.</p>
+            
         </div>
         <div class="project">
             <h3>Algorythms</h3>
             <p>An app to help organize and take appointments from doctors conveniently in a hassle-free way</p>
+         
         </div>
         <!-- Add more projects as needed -->
     </section>
