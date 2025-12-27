@@ -112,7 +112,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Aryan Roy</p>
+        <p>&copy; 2026 Aryan Roy</p>
     </footer>
 
     <script>
