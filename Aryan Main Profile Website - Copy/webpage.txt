@@ -1,0 +1,59 @@
+# Project Overview: Aryan Roy - Personal Portfolio Website
+
+## 1. Core Architecture
+- **Framework**: React.js
+- **Styling**: Plain CSS (Modular files: `index.css`, `spiderman.css`, `batman.css`, `bigsignal.css`)
+- **Animations**: Framer Motion (Scroll animations, variants, transitions).
+- **Icons**: Lucide React.
+- **Entry Point**: `App.jsx` controls the global state, specifically the "Profile" vs "Game Mode" ("Knightverse") toggle.
+
+## 2. Key Interactive Features
+
+### A. The Bat-Signal System
+- **Components**: `BigBatSignal.jsx`, `BatmanTrigger.jsx`
+- **Logic**:
+    - A global signal overlay controlled by `App.jsx` state (`visible`, `type`).
+    - **Easter Egg**: Clicking the Bat-Icon in the Hero section flashes a blurred signal.
+    - **Game Mode Trigger**: A persistent "Batman Trigger" button (bottom right functionality inferred) initiates a sequence to enter the "Knightverse". This triggers a confirm dialog.
+
+### B. Spiderman Decoration
+- **Component**: `SpidermanDecoration.jsx`
+- **Location**: Anchored to the "Honors & Achievements" section.
+- **Functionality**:
+    - **Entrance**: Animated "Web Shoot" entry (grows down).
+    - **Idle**: Gentle rubber-band bouncing loop.
+    - **Interaction**:
+        - **Spidey Sense**: Multi-colored rings (White, Yellow, Orange) fade in behind Spiderman's head based on global mouse proximity (Window event listener).
+        - **Tooltip**: Hovering over Spiderman triggers a comic-style speech bubble ("Check out Bats—cool toys, zero chill!").
+
+### C. Contact Section Games
+- **Component**: `TicTacToe.jsx`
+- **Location**: Embedded in the Contact section.
+- **Functionality**: A fully playable Matrix-themed Tic-Tac-Toe game that users can play while viewing contact info.
+
+### D. Visual Effects
+- **Animated Background**: `AnimatedBackground.jsx` (Global background effect).
+- **Matrix Cards**: Project cards in `Profile.jsx` use a `Typewriter.jsx` component to simulate typing text for descriptions.
+
+## 3. Content Structure (`Profile.jsx`)
+
+1.  **Hero Section**:
+    - Introduction (“First, I solve the problem...”).
+    - Bat-Signal easter egg trigger (Top Right).
+    - Bio highlighting IIT Ropar Minor & Adamas University.
+
+2.  **Philosophy**: Brief statement on "Innovation and Velocity".
+3.  **Tech Stack**: Grid of skills (Python, React, TensorFlow, etc.).
+4.  **Experience**: Professional roles (e.g., Market Data Analyst).
+5.  **Selected Works**: Detailed project cards (Docutag-AI, Triple S, etc.) using the "Matrix" aesthetic.
+6.  **Education**: Timeline of academic qualifications (IIT Ropar, Adamas, IIRS ISRO).
+7.  **Achievements**: List of hackathon wins and awards, visually framed by the Spiderman component.
+8.  **Contact**: Split layout with contact details on the left and the Tic-Tac-Toe game on the right.
+
+## 4. File Structure Summary
+- `src/App.jsx`: Main Layout & State Manager.
+- `src/components/Profile/Profile.jsx`: Primary single-page content.
+- `src/components/SpidermanDecoration.jsx`: Spidey interactive logic.
+- `src/components/TicTacToe.jsx`: Mini-game logic.
+- `src/components/BigBatSignal.jsx`: Overlay visual component.
+- `src/styles/*.css`: Modular CSS files handling specific themes (Batman vs Spiderman).

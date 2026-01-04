@@ -1,0 +1,337 @@
+/* Scoped styles for BigBatSignal.jsx - High Fidelity "Bat-Signal Main" Effect */
+.big-bat-signal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+}
+
+/* Base Light Source Container */
+.big-bat-signal-wrapper .light {
+    mix-blend-mode: screen;
+    width: 22vmin;
+    height: 22vmin;
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0;
+    overflow: visible;
+
+    /* Animation: Enter + Sustain (Fluctuate) */
+    animation: signal-flicker-loop 4s linear infinite;
+}
+
+/* 
+   VARIANT 1: CORNER (Source Top-Right, Beam Bottom-Left)
+*/
+.big-bat-signal-wrapper.signal-corner {
+    position: absolute;
+    /* Anchored to document bottom */
+    top: auto;
+    bottom: 0;
+    height: 120vh;
+    /* Be slightly taller to cover scroll bounce? */
+}
+
+.big-bat-signal-wrapper.signal-corner .light {
+    bottom: 65vh;
+    right: 5vw;
+    left: auto;
+
+    /* 
+       Rotation: 190deg (Steep South-West).
+       180 = Down. 
+       200 was "Top Left"? (Maybe wrapped?)
+       190 should be closer to Down/Left.
+    */
+    --rot: -45deg;
+
+    transform: translate(0, 0) rotate(var(--rot)) scale(0.6);
+    filter: blur(1px);
+    transform-origin: center center;
+}
+
+/* 
+   VARIANT 2: CENTER (Hero Cloud)
+*/
+.big-bat-signal-wrapper.signal-center .light {
+    top: 50%;
+    left: 50%;
+    --rot: 0deg;
+    transform: translate(-50%, -50%) rotate(var(--rot)) scale(1.5);
+    filter: blur(2px);
+}
+
+/* Animation Overrides */
+.big-bat-signal-wrapper.signal-corner .light,
+.big-bat-signal-wrapper.signal-center .light {
+    animation-name: signal-flicker-loop;
+}
+
+/* Realistic "Fluctuating Bulb" Effect */
+@keyframes signal-flicker-loop {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.1;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.8;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    18% {
+        opacity: 0.4;
+    }
+
+    20% {
+        opacity: 0.9;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    27% {
+        opacity: 0.3;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0.9;
+    }
+
+    35% {
+        opacity: 0.75;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0.55;
+    }
+
+    46% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.85;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.4;
+    }
+
+    76% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.95;
+    }
+}
+
+
+/* --- INNER ELEMENTS --- */
+
+/* The Beam (Triangle) - Points UP relative to element if 0deg? */
+.big-bat-signal-wrapper .light:before {
+    content: "";
+    position: absolute;
+
+    border: 8vmin solid transparent;
+    border-top: 250vmin solid rgba(255, 244, 210, 0.35);
+
+    top: 11vmin;
+    left: 0.5vmin;
+    border-radius: 0.5vmin;
+    opacity: 0.65;
+    filter: blur(5px);
+    width: 5vmin;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Glow Effect */
+.big-bat-signal-wrapper .light:after {
+    content: "";
+    mix-blend-mode: soft-light;
+    background: #fff4d2;
+    width: 22vmin;
+    height: 22vmin;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(2px);
+}
+
+/* LOGO CONTAINER */
+.big-bat-signal-wrapper #batman-logo {
+    filter: contrast(1.5) blur(0.5px);
+    height: 4.35vmin;
+    width: 16vmin;
+    position: absolute;
+    overflow: hidden;
+    background: #000;
+
+    /* Centered on Lens */
+    left: 3vmin;
+    top: 8.825vmin;
+
+    --logo-scale: 1;
+
+    /* Counter Rotation + Scale */
+    transform: rotateZ(calc(-1 * var(--rot))) rotateY(15deg) rotateX(0deg) scaleY(1.75) scaleX(1.25) scale(var(--logo-scale));
+
+    background-image: linear-gradient(to top right, rgb(72, 84, 92) 0%, rgb(25, 26, 26) 63%, rgb(26, 26, 26) 86%);
+    box-shadow: 0 0 10vmin 2vmin #fff;
+    border-radius: 5% 5% 100% 100%;
+
+    transition: top 0s;
+    z-index: 5;
+}
+
+/* 
+   SPECIAL PROJECTED LOGO FOR CORNER VARIANT 
+*/
+.big-bat-signal-wrapper.signal-corner #batman-logo {
+    /* Keep on lens */
+    top: 8.825vmin;
+    --logo-scale: 0.9;
+    opacity: 1;
+    filter: blur(0.5px);
+}
+
+/* Inner Pieces */
+.big-bat-signal-wrapper #batman-logo div {
+    position: absolute;
+}
+
+.big-bat-signal-wrapper #left-white {
+    background: #fff4d1;
+    border-radius: 3.2vmin 5.12vmin 0.96vmin 1.16vmin / 2.56vmin 3.2vmin 1.16vmin 1.16vmin;
+    width: 7.36vmin;
+    height: 2.56vmin;
+    top: -0.032vmin;
+    left: -5.056vmin;
+}
+
+.big-bat-signal-wrapper #left-white:after {
+    content: "";
+    position: absolute;
+    background: #fff4d1;
+    width: 10.656vmin;
+    height: 7.04vmin;
+    border-radius: 0 12.8vmin 12.8vmin 12.8vmin / 0 9.6vmin 9.6vmin 9.6vmin;
+    top: 2.336vmin;
+    left: 2.816vmin;
+}
+
+.big-bat-signal-wrapper #right-white {
+    background: #fff4d1;
+    border-radius: 5.12vmin 3.2vmin 1.16vmin 0.96vmin / 3.2vmin 2.56vmin 1.16vmin 1.16vmin;
+    width: 7.36vmin;
+    height: 2.56vmin;
+    top: -0.032vmin;
+    right: -5.056vmin;
+}
+
+.big-bat-signal-wrapper #right-white:after {
+    content: "";
+    position: absolute;
+    background: #fff4d1;
+    width: 12.256vmin;
+    height: 7.04vmin;
+    border-radius: 12.8vmin 0 12.8vmin 12.8vmin / 9.6vmin 0 9.6vmin 9.6vmin;
+    top: 2.336vmin;
+    right: 1.216vmin;
+}
+
+.big-bat-signal-wrapper #top-white {
+    width: 0.384vmin;
+    top: 0;
+    left: 7.664vmin;
+    border-left: 0.384vmin solid #fff0;
+    border-right: 0.384vmin solid #fff0;
+    border-top: 0.64vmin solid #fff;
+}
+
+.big-bat-signal-wrapper #top-white:before {
+    content: "";
+    position: absolute;
+    width: 2.08vmin;
+    height: 2.464vmin;
+    background: #fff4d1;
+    border-radius: 0.96vmin 0.32vmin 0.32vmin 0.96vmin / 2.56vmin 1.16vmin 1.16vmin 1.16vmin;
+    top: -2.08vmin;
+    right: 0.576vmin;
+    transform: rotate(5deg);
+}
+
+.big-bat-signal-wrapper #top-white:after {
+    content: "";
+    position: absolute;
+    width: 2.08vmin;
+    height: 2.464vmin;
+    background: #fff4d1;
+    border-radius: 0.32vmin 0.96vmin 0.96vmin 0.32vmin / 1.16vmin 2.56vmin 1.16vmin 1.16vmin;
+    top: -2.08vmin;
+    left: 0.576vmin;
+    transform: rotate(-5deg);
+}
+
+.big-bat-signal-wrapper #lighting {
+    width: 3.2vmin;
+    height: 3.2vmin;
+    background: #fff4d1;
+    border-radius: 2.4vmin;
+    left: 3.2vmin;
+    top: -0.32vmin;
+    opacity: 0.02;
+    box-shadow: #fff 0 0 2.24vmin;
+}

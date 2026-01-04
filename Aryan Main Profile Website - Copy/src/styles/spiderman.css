@@ -1,0 +1,358 @@
+/* Scoped Spiderman Styles */
+.spidey-container {
+    height: 70em;
+    /* Square for circular shape */
+    width: 70em;
+    /* Square for circular shape */
+    border-radius: 50%;
+    /* Force circular hit-test area */
+    transform: scale(0.3);
+    /* Scale down to fit as decoration */
+    transform-origin: top center;
+    position: relative;
+}
+
+.spidey-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.spidey-rope {
+    height: 15.62em;
+    /* User updated height */
+    width: 0.15em;
+    background-color: #fff;
+    /* animation handled by Framer Motion */
+    transform-origin: top center;
+}
+
+.spidey-legs {
+    height: 1.12em;
+    width: 7.5em;
+    background-color: transparent;
+    box-shadow: 0 0 0 0.12em #140243, 0 0 0 1.06em #1b1676, 0 0 0 1.18em #140243;
+    /* top: 12.5em; Replaced with bottom to anchor to growing rope end */
+    bottom: 3.12em;
+    border-radius: 3.12em;
+}
+
+.spidey-boot-l,
+.spidey-boot-r {
+    height: 1.25em;
+    width: 2.5em;
+    background-color: #e32832;
+    position: absolute;
+    border: 0.12em solid #140243;
+    bottom: 1.12em;
+}
+
+.spidey-boot-l {
+    left: 1em;
+}
+
+.spidey-boot-r {
+    transform: rotateY(180deg);
+    left: 3.81em;
+}
+
+.spidey-boot-l:before,
+.spidey-boot-r:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 1.12em solid #140243;
+    border-left: 1.18em solid transparent;
+    bottom: 1.31em;
+    left: 1.46em;
+}
+
+.spidey-boot-l:after,
+.spidey-boot-r:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 1.12em solid #e32832;
+    border-left: 1em solid transparent;
+    right: 0;
+    top: -0.93em;
+}
+
+.spidey-costume {
+    height: 6.25em;
+    width: 5.62em;
+    background: linear-gradient(to right, #1b1676 20%, #e32832 20%, #e32832 80%, #1b1676 80%);
+    border: 0.12em solid #140243;
+    /* top: 14.68em; Replaced with bottom to anchor to growing rope end */
+    bottom: 0.94em;
+}
+
+.spidey-spider {
+    height: 1.87em;
+    width: 0.93em;
+    background-color: #140243;
+    border-radius: 45%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: calc(50% + 0.93em);
+    left: 50%;
+}
+
+.spidey-s1,
+.spidey-s3 {
+    height: 7.5em;
+    width: 2.5em;
+    border-radius: 0 0 1.37em 1.37em;
+    border-bottom: 0.12em solid #140243;
+    position: absolute;
+    left: 50%;
+}
+
+.spidey-s1 {
+    bottom: 1.43em;
+}
+
+.spidey-s3 {
+    top: 1.43em;
+    transform: translateX(-50%) rotateX(180deg);
+}
+
+.spidey-s2,
+.spidey-s4 {
+    height: 7.5em;
+    width: 3.12em;
+    border-radius: 0 0 1.56em 1.56em;
+    border-bottom: 0.12em solid #140243;
+    position: absolute;
+    left: 50%;
+}
+
+.spidey-s2 {
+    bottom: 0.93em;
+}
+
+.spidey-s4 {
+    top: 0.93em;
+    transform: translateX(-50%) rotateX(180deg);
+}
+
+.spidey-belt {
+    height: 0.43em;
+    width: 5.87em;
+    background-color: #e32832;
+    border: 0.12em solid #140243;
+    top: -0.12em;
+}
+
+.spidey-hand-r,
+.spidey-hand-l {
+    height: 8.12em;
+    width: 1.12em;
+    background: linear-gradient(#e32832 4.6em, #140243 4.6em, #140243 4.75em, #1b1676 4.75em, #1b1676 8.12em);
+    border: 0.12em solid #140243;
+    border-radius: 1.25em;
+    position: absolute;
+    transform-origin: bottom;
+    bottom: -0.12em;
+}
+
+.spidey-hand-r {
+    right: -0.75em;
+    transform: rotate(-22deg);
+}
+
+.spidey-hand-l {
+    left: -0.75em;
+    transform: rotate(22deg);
+}
+
+.spidey-neck {
+    background-color: #e32832;
+    height: 0.37em;
+    width: 1.25em;
+    bottom: -0.5em;
+    border: 0.12em solid #140243;
+}
+
+.spidey-mask {
+    height: 4.65em;
+    width: 4.06em;
+    background-color: #e32832;
+    bottom: -4.99em;
+    border-radius: 50% 50% 50% 50% / 54% 54% 46% 46%;
+    border: 0.12em solid #140243;
+    top: 6.56em;
+}
+
+.spidey-eye-l,
+.spidey-eye-r {
+    height: 0.68em;
+    width: 1.37em;
+    background-color: #fff;
+    border-radius: 1.37em 1.37em 0 0;
+    border: 0.12em solid #140243;
+    position: absolute;
+    top: 2.1em;
+}
+
+.spidey-eye-l {
+    left: 0.3em;
+}
+
+.spidey-eye-r {
+    right: 0.3em;
+}
+
+
+
+/* Comic Bubble Tooltip */
+.spidey-tooltip-container {
+    position: absolute;
+    top: 100%;
+    /* Position BELOW the spider */
+    bottom: auto;
+    margin-top: 4em;
+    /* Clear the mask/head and legs */
+    left: 50%;
+    transform: translateX(-50%) translateY(0) rotate(-5deg);
+    /* Centered horizontally */
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: max-content;
+    /* Ensure it wraps content */
+}
+
+.spidey-tooltip {
+    background: #fff;
+    color: #000;
+    padding: 3rem 3.5rem;
+    /* Super massive padding */
+    border-radius: 60px;
+    border: 6px solid #000;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    font-size: 2.2rem;
+    /* Super massive text */
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.spidey-tooltip::after {
+    content: '';
+    position: absolute;
+    top: -14px;
+    /* Arrow at top pointing up */
+    bottom: auto;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 0 14px 14px;
+    /* Triangle pointing up */
+    border-color: transparent transparent #000 transparent;
+    transform: rotate(0deg);
+}
+
+/* Spidey Sense ("Tingle") - Anchored inside .spidey-mask (Head) */
+
+/* Proximity Rings */
+.spidey-ring-container {
+    position: absolute;
+    top: 8.89em;
+    /* Aligned with Spidey Head Center relative to Costume */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: -1;
+    /* Behind the head */
+}
+
+.spidey-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-style: solid;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+    /* Fast response */
+    box-shadow: 0 0 10px currentColor;
+}
+
+/* Outer Ring - White */
+.spidey-ring.white {
+    width: 25em;
+    height: 25em;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.4);
+    opacity: var(--opacity-white, 0);
+    animation: pulse-ring 2s infinite;
+}
+
+/* Mid Ring - Yellow */
+.spidey-ring.yellow {
+    width: 15em;
+    height: 15em;
+    border-width: 4px;
+    border-color: #ffd700;
+    color: #ffd700;
+    opacity: var(--opacity-yellow, 0);
+    animation: pulse-ring 1.5s infinite reverse;
+}
+
+/* Inner Ring - Orange */
+.spidey-ring.orange {
+    width: 8em;
+    height: 8em;
+    border-width: 6px;
+    border-color: #ff8c00;
+    color: #ff8c00;
+    opacity: var(--opacity-orange, 0);
+    animation: pulse-ring 1s infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+/* Triggers */
+
+/* 1. Tooltip: Only when hovering directly over the costume or legs */
+.spidey-costume:hover~.spidey-tooltip-container,
+.spidey-legs:hover~.spidey-tooltip-container,
+.spidey-tooltip-container:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+}
+
+/* 2. Sense: When hovering anywhere near (Container) */
+/* 2. Sense: Proximity logic handled via JS CSS Vars on .spidey-ring */
+
+/* Override previous generic hover */
+.spidey-container:hover .spidey-tooltip-container {
+    opacity: 0;
+    /* Default hidden on container hover */
+}
+
+/* Re-assert visibility for direct hover (needed because of specificity/cascade) */
+.spidey-costume:hover~.spidey-tooltip-container,
+.spidey-legs:hover~.spidey-tooltip-container {
+    opacity: 1;
+}

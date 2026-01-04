@@ -1,0 +1,116 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.5in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{setspace} % Required for 1.15 spacing
+
+% GLOBAL SETTING: Disables indentation
+\setlength{\parindent}{0pt}
+% REMOVES PAGE NUMBER
+\pagenumbering{gobble}
+
+% ATS REQUIREMENT: 1.15 Line Spacing
+\setstretch{1.15}
+
+% SECTION SPACING
+% Optimized to 8pt/4pt to fit the new certification on one page
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% BULLET SPACING (Standardized)
+\setlist[itemize]{topsep=0pt, partopsep=0pt, itemsep=1pt, parsep=0pt, leftmargin=*}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge \textbf{Aryan Roy}} \\
+    % ATS Fix: Standard Pipe Separators
+    Shyamnagar, Kolkata, West Bengal, India \ $|$ +91 9674389386 \ $|$ aryanroy56670@gmail.com \\
+    \href{www.linkedin.com/in/invokress}{www.linkedin.com/in/invokress}
+\end{center}
+
+% Education
+\section{Education}
+\noindent \textbf{Adamas University} \hfill Kolkata, India \\
+\textit{B.Tech in Computer Science (AI \& ML)} \hfill June 2023 -- June 2027 (Expected) \\
+\textit{Relevant Coursework:} Data Structures, Algorithms, DBMS, Neural Networks, Cloud Computing, SDLC.
+
+\vspace{5pt}
+
+\noindent \textbf{IIT Ropar} \hfill Remote \\
+\textit{Minor in Artificial Intelligence (Certification)} \hfill Nov 2024 -- Present
+
+% Skills
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} Python, C, Java, JavaScript, SQL, English, Bengali
+    \item \textbf{Domains:} Generative AI, LLMs, Deep Learning, NLP, Computer Vision, Agile
+    \item \textbf{Frameworks \& Tools:} Llama-3, Groq, FastAPI, TensorFlow, PyTorch, Firebase, Docker
+\end{itemize}
+
+% Experience
+\section{Experience}
+\noindent \textbf{Market Data Analyst} \hfill Dec 2024 -- Present \\
+\textit{IBA Group of Industries} \hfill Remote
+\begin{itemize}
+    \item Analyzed customer engagement metrics to optimize outreach strategies, increasing conversion rates by \textbf{30\%}.
+\end{itemize}
+
+% Projects
+\section{Projects}
+\noindent \textbf{Docutag-AI} \hfill June 2025 -- Present \\
+\textit{docutag-ai.vercel.app}
+\hfill\textit{ Tech: Python, FastAPI, Llama-3 (Groq), Firebase}
+\begin{itemize}
+    \item Architected a document-agnostic parsing platform using \textbf{Groq (Llama-3)}, outperforming standard GPT wrappers in speed.
+    \item Deployed a scalable \textbf{FastAPI} backend on Vercel with custom rate-limiting to process unstructured text into structured intelligence.
+\end{itemize}
+
+\noindent \textbf{AI-Powered Road Safety Ecosystem} \hfill Jan 2025 -- Present \\
+\textit{Triple S} \hfill \textit{Tech: Python, TensorFlow, IoT Analytics}
+\begin{itemize}
+    \item Spearheaded a real-time traffic monitoring solution for Coimbatore to improve emergency response times by \textbf{25\%}.
+    \item Integrated \textbf{Neural Network} algorithms for accident prediction, achieving \textbf{78\%} accuracy (vs 60\% baseline).
+\end{itemize}
+
+\noindent \textbf{Virtual Herbal Garden (AR/VR)} \hfill Aug 2024 -- Present \\
+\textit{AruyaVeda} \hfill \textit{Tech: Unity, C\#, NLP, Generative AI}
+\begin{itemize}
+    \item Built an immersive 3D platform for medicinal plants, increasing user engagement time by \textbf{20\%}.
+    \item Deployed an NLP-based AI chatbot capable of correctly handling \textbf{50+} unique query types.
+\end{itemize}
+
+\noindent \textbf{Doctor Appointment App} \hfill June 2024 -- Present \\
+\textit{Algorythms} \hfill \textit{Tech: Flutter, React Native, Firebase}
+\begin{itemize}
+    \item Developed a user-friendly mobile application, streamlining the doctor scheduling process.
+    \item Reduced booking friction by designing an intuitive UI, resulting in a \textbf{30\%} faster appointment setup time.
+\end{itemize}
+
+\noindent \textbf{Modular HydroBot} \hfill Jan 2024 -- Present \\
+\textit{Epsilon-X} \hfill \textit{Tech: C++, Arduino, IoT Sensors}
+\begin{itemize}
+    \item Engineered a modular HydroBot with Wi-Fi cameras and ultrasonic sensors, tested to a depth of \textbf{2 meters}.
+    \item Optimized sensor data transmission protocols, ensuring low-latency reconnaissance (\textbf{under 300ms}).
+\end{itemize}
+
+% Certifications
+\section{Certifications}
+\begin{itemize}
+    % ADDED: ISRO Certification
+    \item \textbf{ISRO (IIRS):} Basics of Remote Sensing, GIS \& GNSS (Grade: A).
+    \item \textbf{Cloud \& DevOps:} Manage Kubernetes in Google Cloud, Load Balancing on Compute Engine.
+    \item \textbf{Data Analytics:} Looker Data Prep, ICDMAI 2025 Medical Chatbot Development.
+\end{itemize}
+
+% Achievements
+\section{Achievements}
+\begin{itemize}
+    \item \textbf{4th Place:} Coding Competition, IIT Kharagpur (Top \textbf{5\%} of participants).
+    \item \textbf{Rank 89/1200+:} SIT ICOE Hackathon (Apr 2024) - Placed in the top \textbf{7\%} globally.
+    \item \textbf{Participation:} IEEE Patent Conclave (Mar 2024), Adinova (Feb 2024).
+\end{itemize}
+
+\end{document}
