@@ -1,7 +1,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Code, Cpu, Globe, Rocket, Terminal, Book, Award, Briefcase, ChevronRight, Mail, Linkedin, MapPin, Phone } from 'lucide-react';
+import { Code, Cpu, Globe, Rocket, Terminal, Book, Award, Briefcase, ChevronRight, Mail, Linkedin, MapPin, Phone, Github } from 'lucide-react';
 import "../../styles/index.css";
 
 import TicTacToe from '../TicTacToe';
@@ -62,6 +62,64 @@ const MatrixCard = ({ role, date, company, description, tech }) => (
   </motion.div>
 );
 
+const SocialHub = () => {
+  const links = [
+    { icon: Github, url: "https://github.com/Invoker56670", label: "GitHub_Repo" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/invokress/", label: "LinkedIn_Net" }
+  ];
+
+  return (
+    <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1.5rem' }}>
+      {links.map((link, index) => (
+        <motion.a
+          key={index}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            padding: '0.8rem 1.2rem',
+            background: 'rgba(0, 0, 0, 0.4)',
+            border: '1px solid rgba(100, 255, 218, 0.3)',
+            borderRadius: '4px', // Cyberpunk sharp edges (or slightly rounded)
+            textDecoration: 'none',
+            color: '#64ffda',
+            fontFamily: '"Fira Code", monospace',
+            fontSize: '0.9rem',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+          whileHover={{
+            scale: 1.05,
+            borderColor: '#64ffda',
+            boxShadow: '0 0 15px rgba(100, 255, 218, 0.4)',
+            backgroundColor: 'rgba(100, 255, 218, 0.1)'
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <link.icon size={20} />
+          <span style={{ fontWeight: 600 }}>{link.label}</span>
+          {/* Glitch/Scanline overlay effect could go here, but keeping it simple & clean for now */}
+          <motion.div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: -100,
+              width: '50%',
+              height: '100%',
+              background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+              transform: 'skewX(-20deg)'
+            }}
+            whileHover={{ left: '200%', transition: { duration: 0.5, ease: "linear" } }}
+          />
+        </motion.a>
+      ))}
+    </div>
+  );
+};
+
 const Profile = ({ onTriggerSignal }) => {
   return (
     <div className="profile-wrapper">
@@ -112,6 +170,7 @@ const Profile = ({ onTriggerSignal }) => {
           <a href="#contact" className="hero-status" style={{ textDecoration: 'none' }}>
             <span className="status-badge pulse"></span> Available for new projects
           </a>
+          <SocialHub />
         </motion.div>
       </motion.section>
 
@@ -315,6 +374,7 @@ const Profile = ({ onTriggerSignal }) => {
             <div className="contact-links">
               <a href="mailto:aryanroy56670@gmail.com" className="contact-link"><Mail size={18} /> aryanroy56670@gmail.com</a>
               <a href="https://linkedin.com/in/invokress" className="contact-link"><Linkedin size={18} /> linkedin.com/in/invokress</a>
+              <a href="https://github.com/Invoker56670" className="contact-link"><Github size={18} /> github.com/Invoker56670</a>
             </div>
             <div className="contact-meta">
               <span><MapPin size={14} /> Kolkata, India</span>
