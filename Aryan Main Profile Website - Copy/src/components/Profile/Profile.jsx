@@ -63,6 +63,14 @@ const MatrixCard = ({ role, date, company, description, tech }) => (
 );
 
 const SocialHub = () => {
+  const palette = {
+    turquoise: '#00FFCC',
+    violet: '#CC00FF',
+    purple: '#FF00CC',
+    supernova: '#FFCC00',
+    cyan: '#00CCFF'
+  };
+
   const links = [
     { icon: Github, url: "https://github.com/Invoker56670", label: "GitHub_Repo" },
     { icon: Linkedin, url: "https://www.linkedin.com/in/invokress/", label: "LinkedIn_Net" }
@@ -70,52 +78,120 @@ const SocialHub = () => {
 
   return (
     <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1.5rem' }}>
-      {links.map((link, index) => (
-        <motion.a
-          key={index}
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            padding: '0.8rem 1.2rem',
-            background: 'rgba(0, 0, 0, 0.4)',
-            border: '1px solid rgba(100, 255, 218, 0.3)',
-            borderRadius: '4px', // Cyberpunk sharp edges (or slightly rounded)
-            textDecoration: 'none',
-            color: '#64ffda',
-            fontFamily: '"Fira Code", monospace',
-            fontSize: '0.9rem',
-            position: 'relative',
-            overflow: 'hidden'
-          }}
-          whileHover={{
-            scale: 1.05,
-            borderColor: '#64ffda',
-            boxShadow: '0 0 15px rgba(100, 255, 218, 0.4)',
-            backgroundColor: 'rgba(100, 255, 218, 0.1)'
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <link.icon size={20} />
-          <span style={{ fontWeight: 600 }}>{link.label}</span>
-          {/* Glitch/Scanline overlay effect could go here, but keeping it simple & clean for now */}
-          <motion.div
+      {links.map((link, index) => {
+        const primaryColor = index === 0 ? palette.turquoise : palette.violet;
+        const secondaryColor = index === 0 ? palette.purple : palette.cyan;
+
+        return (
+          <motion.a
+            key={index}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
             style={{
-              position: 'absolute',
-              top: 0,
-              left: -100,
-              width: '50%',
-              height: '100%',
-              background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
-              transform: 'skewX(-20deg)'
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.8rem 1.2rem',
+              background: 'rgba(0, 0, 0, 0.6)',
+              border: `1px solid ${primaryColor}`,
+              borderRadius: '4px',
+              textDecoration: 'none',
+              fontFamily: '"Fira Code", monospace',
+              fontSize: '0.9rem',
+              overflow: 'visible', // Allow glitch spillover
+              cursor: 'pointer'
             }}
-            whileHover={{ left: '200%', transition: { duration: 0.5, ease: "linear" } }}
-          />
-        </motion.a>
-      ))}
+          >
+            {/* Glitch Layers (Red/Blue Split) */}
+            <motion.div
+              variants={{
+                rest: { opacity: 0, x: 0 },
+                hover: { opacity: 1, x: -3 }
+              }}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                padding: '0.8rem 1.2rem',
+                color: 'red',
+                background: 'transparent',
+                zIndex: -1,
+                pointerEvents: 'none',
+                filter: 'blur(1px)' // Subtle blur
+              }}
+            >
+              <link.icon size={20} />
+              <span style={{ fontWeight: 600 }}>{link.label}</span>
+            </motion.div>
+
+            <motion.div
+              variants={{
+                rest: { opacity: 0, x: 0 },
+                hover: { opacity: 1, x: 3 }
+              }}
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                padding: '0.8rem 1.2rem',
+                color: 'blue',
+                background: 'transparent',
+                zIndex: -1,
+                pointerEvents: 'none',
+                filter: 'blur(1px)'
+              }}
+            >
+              <link.icon size={20} />
+              <span style={{ fontWeight: 600 }}>{link.label}</span>
+            </motion.div>
+
+            {/* Main Content */}
+            <motion.div
+              style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: primaryColor, zIndex: 1 }}
+              variants={{
+                hover: {
+                  color: palette.supernova,
+                  textShadow: `0 0 8px ${primaryColor}`
+                }
+              }}
+            >
+              <link.icon size={20} />
+              <span style={{ fontWeight: 600 }}>{link.label}</span>
+            </motion.div>
+
+            {/* Border Glitch / Glow */}
+            <motion.div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                border: `1px solid ${palette.supernova}`,
+                opacity: 0
+              }}
+              variants={{
+                hover: {
+                  opacity: [0, 1, 0, 1, 0],
+                  transition: { duration: 0.4, repeat: Infinity, repeatType: "mirror" }
+                }
+              }}
+            />
+          </motion.a>
+        );
+      })}
     </div>
   );
 };
